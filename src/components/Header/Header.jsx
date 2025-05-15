@@ -8,6 +8,7 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 
 
 
+
 function Header() {
     const location = useLocation();
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -99,11 +100,6 @@ function Header() {
                     {userRole !== "Employee" && userRole !== "Admin" && userRole === "Business" && (
                         <Link to="/createjob" className={`relative ${location.pathname === "/createjob" ? "text-blue-600 font-bold" : "text-gray-600 hover:text-gray-800"}`}>
                             Create Job
-                        </Link>
-                    )}
-                    {userRole !== "Employee" && userRole === "Business" && (
-                        <Link to="/apply" className={`relative ${location.pathname === "/apply" ? "text-blue-600 font-bold" : "text-gray-600 hover:text-gray-800"}`}>
-                            Apply
                         </Link>
                     )}
 
